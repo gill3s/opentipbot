@@ -29,7 +29,7 @@ OPentip needs several components configuration. You will need to configure the d
 
 #### Database Configuration
 
-Opentipbot needs a PosgreSQL database to operate. You will need to setup a database with a dedicated user and fill the appropriate info in /opentipbot-persistence/profiles/. This directory contains multiple profiles you can use for different environments (development, integration production etc). The source code provides two profiles but you can add more if you need to. For each profile there's one application.properties files containing all persistence configuration for PostgreSQL and Hibernate :
+Opentipbot needs a PosgreSQL database to operate. You will need to setup a database with a dedicated user and fill the appropriate info in `/opentipbot-persistence/profiles/`. This directory contains multiple profiles you can use for different environments (development, integration production etc). The source code provides two profiles but you can add more if you need to. For each profile there's one application.properties files containing all persistence configuration for PostgreSQL and Hibernate :
 
 ```
 #Database Configuration
@@ -53,7 +53,7 @@ You will also need to create manually some table in the database. Execute the sc
 
 Opentipbot will need a coin daemon to run in order to manage user wallets. For security reason I would recommend to host the coin deamon in a separate host and configure encrypt connexion and proper firewall configuration between the webapp/database servers and the coin daemon host. You will also need to configure RPC access to your daemon to make the communication possible. You also need to backup the wallet regularly, in order not to loose any coin.
 
-Once your coin deamon is set up, you can configure opentipbot to acces it the proper way. Configuration file is located in /opentipbot-persistence/profiles/. This directory contains multiple profiles you can use for different environments (development, integration production etc). The source code provides two profiles but you can add more if you need to. For each profile there's one application.properties files containing the configuration of the coin daemon :
+Once your coin deamon is set up, you can configure opentipbot to acces it the proper way. Configuration file is located in `/opentipbot-persistence/profiles/`. This directory contains multiple profiles you can use for different environments (development, integration production etc). The source code provides two profiles but you can add more if you need to. For each profile there's one application.properties files containing the configuration of the coin daemon :
 
 ```
 #coin daemon Configuration
@@ -68,7 +68,7 @@ The second app is used only for the webapp, for this one you will only need the 
 
 To set up twitter app and configure keys, please read carefully twitter dev documentation.
 
-Once you've set all those keys you will need to put them in the configuration file in /opentipbot-persistence/profiles/. This directory contains multiple profiles you can use for different environments (development, integration production etc). The source code provides two profiles but you can add more if you need to. For each profile there's one application.properties files containing the configuration of twitter :
+Once you've set all those keys you will need to put them in the configuration file in `/opentipbot-persistence/profiles/`. This directory contains multiple profiles you can use for different environments (development, integration production etc). The source code provides two profiles but you can add more if you need to. For each profile there's one application.properties files containing the configuration of twitter :
 
 ```
 #Twitter configuration
@@ -88,7 +88,7 @@ Opentipbot consists in one webapp for the website and on Java process running in
 Once you have built the war file fil can deploy it on any application server. I recommend jetty for its simplicity but you can use Jboss or tomcat or any application server you want to host this web application.
 
 #### Running the background jobs
-The module called "opentipbot-jobs" once built generates a runnable jar. We provide a script for transforming this runnable jar in a background service for linux systems, you can use it if you wants. Keep in mind that if that application is not running the bot wont work !
+The module called "opentipbot-jobs" once built generates a runnable jar. We provide a script for transforming this runnable jar in a background service for linux systems, you can use it if you want. Keep in mind that if that application is not running the bot wont work !
 
 #### Got questions ?
 
