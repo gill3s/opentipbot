@@ -1,0 +1,33 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>opentipbot-service</artifactId>
+    <packaging>jar</packaging>
+    <description></description>
+    <parent>
+        <groupId>opentipbot</groupId>
+        <artifactId>opentipbot-parent</artifactId>
+        <version>0.1</version>
+    </parent>
+
+    <dependencies>
+        <dependency>
+            <groupId>opentipbot</groupId>
+            <artifactId>opentipbot-persistence</artifactId>
+            <version>0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>net.glxn</groupId>
+            <artifactId>qrgen</artifactId>
+            <version>1.4</version>
+        </dependency>
+
+        <!-- Spring Social Twitter -->
+        <dependency>
+            <groupId>org.springframework.social</groupId>
+            <artifactId>spring-social-twitter</artifactId>
+            <version>${spring.social.twitter.version}</version>
+        </dependency>
+
+    </dependencies>
+</project>
